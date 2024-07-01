@@ -17,7 +17,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new BundleAnalyzer(),
-  ],
+  plugins: [new BundleAnalyzer()],
+  devServer: {
+    static: path.join(__dirname, 'dist'),
+    port: 9000,
+  },
 };
